@@ -1,0 +1,7 @@
+$mainColor: #ffc0cb;
+
+#our-beginning {
+	h2 {
+		color: $mainColor;
+	}
+}
