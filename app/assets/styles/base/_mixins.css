@@ -1,0 +1,33 @@
+
+/*
+    [0 - 529px]:            Phone (is where normal styles apply) - atSmallest
+    530px - 799px:          Tablet Portrait                      - atSmall
+    800px - 1199px:         Tablet Landscape                     - atMedium
+    1200px - infinity:      Desktop, Big Desktop                 - atLarge
+
+    1em = 16px ---> 33.125em = 530px
+    1em = 16px ---> 50em = 800px
+    1em = 16px ---> 75em = 1200px
+*/
+$breakpoint-tab-port: 33.125em;
+$breakpoint-tab-land: 50em;
+$breakpoint-desktop: 75em;
+
+@define-mixin atSmall {
+    @media (min-width: $breakpoint-tab-port) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atMedium {
+    @media (min-width: $breakpoint-tab-land) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atLarge {
+    @media (min-width: $breakpoint-desktop) {
+        @mixin-content;
+    }
+}
+
