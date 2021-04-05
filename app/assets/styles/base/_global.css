@@ -1,0 +1,25 @@
+html {
+    /* 1rem equals the font size of the html element (root element) (which for most browsers has a default value of 16px)
+    16px = 100% , 10px = ?% ==> 10/16 = 0.625, 0.625 * 100 = 62.5% ==> 10px = 62.5%;
+    it is define for 1 rem (now, 1rem = 10px) */    
+    font-size: 62.5%;
+}
+
+body {
+    color: #333;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
