@@ -1,6 +1,11 @@
 
 .large-hero {
-    position: relative;   
+    position: relative;
+    border-bottom: .8rem solid $color-primary;
+    
+    &__image {
+        display: block;
+    }
     
     &__text-content {
         position: absolute;
@@ -12,15 +17,11 @@
     }
 
     &__title {
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 300;
         color: $color-primary;
         margin: 0;
         margin-bottom: 1rem;
-
-        @mixin atSmall {
-            font-size: 4rem;
-        }
 
         @mixin atMedium {
             font-size: 5rem;
@@ -32,19 +33,35 @@
     }
 
     &__subtitle {
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 300;
         color: $color-primary;
         margin: 0;
         margin-bottom: 3rem;
+
+        @mixin atMedium {
+            font-size: 3.5rem;
+        }
+
+        @mixin atLarge {
+            font-size: 4rem;
+        }
     }
 
     &__description {
         max-width: 40rem;
         margin: 0 auto 3rem;
-        font-size: 2.2rem;
+        font-size: 1.9rem;
         color: $color-white;
-        text-shadow: 2px 2px 0 rgba(0,0,0, .1);
+        text-shadow: 2px 2px 0 rgba(0,0,0, .2);
+
+        @mixin atSmall {
+            font-size: 2rem;
+        }
+
+        @mixin atMedium {
+            font-size: 2.2rem;
+        }
     }
 }
 

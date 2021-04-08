@@ -102,5 +102,66 @@ body {
 }
 
 p {
-    line-height: 1.7;
+    line-height: 1.8;
+}
+
+.headline {
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: $color-primary;
+    line-height: 1.5;
+
+    @mixin atSmall {
+        font-size: 3.2rem;
+    }
+
+    @mixin atMedium {
+        font-size: 3.6rem;
+    }
+
+    &--small {
+        font-size: 1.8rem;
+
+        @mixin atSmall {
+            font-size: 2.5rem;
+        }
+    
+        @mixin atMedium {
+            font-size: 2.8rem;
+        }
+    }
+    
+    strong {
+        font-weight: 400;
+    }
+
+    &--light {
+        font-weight: 100;
+    }
+
+    &--secondary {
+        color: $color-secondary;
+    }
+
+    &--centered {
+        text-align: center;
+    }
+    
+    &--narrow {
+        max-width: 50rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--mb-small {
+        margin-bottom: .5em;
+    }
+
+    &--mb-large {
+        margin-bottom: 1.6em;
+    }
+
+    &--mt-0 {
+        margin-top: 0;
+    }
 }

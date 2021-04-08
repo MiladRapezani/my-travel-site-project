@@ -1,0 +1,12 @@
+.page-section {
+    padding: 2.8rem 0;
+
+    @mixin atMedium {
+        padding: 7.2rem 0;
+    }
+
+    &--primary {
+        color: $color-white;
+        background-color: $color-primary;
+    }
+}

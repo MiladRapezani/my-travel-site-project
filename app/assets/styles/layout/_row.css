@@ -1,0 +1,44 @@
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--gutters > div {
+        padding-left: 6.5rem;
+    }
+
+    &--gutters {
+        margin-left: -6.5rem;   /* wrapper overflow-x: hidden; */
+    }
+
+    @mixin atMedium {
+        &__medium-4 {
+            flex-basis: 33.33%;
+        }
+
+        &__medium-4-larger {
+            flex-basis: 37%;
+        }
+    
+        &__medium-8 {
+            flex-basis: 66.66%;
+        }
+    
+        &__medium-8-smaller {
+            flex-basis: 63%;
+        }        
+    }
+
+    &__mb-until-medium {
+        margin-bottom: 1.5rem;
+
+        @mixin atSmall {
+            margin-bottom: 4.5rem;
+        }
+
+        @mixin atMedium {
+            margin-bottom: 0;
+        }
+    }
+
+}
