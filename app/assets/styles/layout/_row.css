@@ -11,6 +11,16 @@
         margin-left: -6.5rem;   /* wrapper overflow-x: hidden; */
     }
 
+    @mixin atLarge {
+        &--gutters-large > div {
+            padding-left: 10rem;
+        }
+    
+        &--gutters-large {
+            margin-left: -10rem;   /* wrapper overflow-x: hidden; */
+        }
+    }
+
     @mixin atMedium {
         &__medium-4 {
             flex-basis: 33.33%;
@@ -26,7 +36,11 @@
     
         &__medium-8-smaller {
             flex-basis: 63%;
-        }        
+        }
+
+        &__medium-6 {
+            flex-basis: 50%;
+        }
     }
 
     &__mb-until-medium {
