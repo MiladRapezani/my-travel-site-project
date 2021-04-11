@@ -1,0 +1,25 @@
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem;
+    color: #ccc;
+    background-color: $color-primary;
+
+    @mixin atMedium {
+        flex-direction: row;
+    }
+
+    &__copyright {
+        font-weight: 300;
+        text-align: center;
+        margin: 0 0 1.5rem;
+
+        @mixin atMedium {
+            margin: 0 0 0 3rem;
+        }
+    }
+
+}
