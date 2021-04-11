@@ -20,12 +20,18 @@
             margin-left: -10rem;   /* wrapper overflow-x: hidden; */
         }
     }
+    
+    @mixin atMediumMore {
+        &--gutters-small > div {
+            padding-left: 4.5rem;
+        }
+    
+        &--gutters-small {
+            margin-left: -4.5rem;   /* wrapper overflow-x: hidden; */
+        }        
+    }
 
     @mixin atMedium {
-        &__medium-4 {
-            flex-basis: 33.33%;
-        }
-
         &__medium-4-larger {
             flex-basis: 37%;
         }
@@ -43,6 +49,12 @@
         }
     }
 
+    @mixin atMediumMore {
+        &__mediumMore-4 {
+            flex-basis: 33.33%;
+        }
+    }
+
     &__mb-until-medium {
         margin-bottom: 1.5rem;
 
@@ -51,6 +63,18 @@
         }
 
         @mixin atMedium {
+            margin-bottom: 0;
+        }
+    }
+
+    &__mb-until-mediumMore {
+        margin-bottom: 12.5rem;
+
+        @mixin atSmall {
+            margin-bottom: 12.5rem;
+        }
+
+        @mixin atMediumMore {
             margin-bottom: 0;
         }
     }

@@ -7,10 +7,12 @@
 
     1em = 16px ---> 33.125em = 530px
     1em = 16px ---> 50em = 800px
+    1em = 16px ---> 64em = 1064px
     1em = 16px ---> 75em = 1200px
 */
 $breakpoint-tab-port: 33.125em;
 $breakpoint-tab-land: 50em;
+$breakpoint-tab-large: 64em;
 $breakpoint-desktop: 75em;
 
 @define-mixin atSmall {
@@ -21,6 +23,12 @@ $breakpoint-desktop: 75em;
 
 @define-mixin atMedium {
     @media (min-width: $breakpoint-tab-land) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atMediumMore {
+    @media (min-width: $breakpoint-tab-large) {
         @mixin-content;
     }
 }
