@@ -2,13 +2,14 @@ const path = require('path');
 const postCSSPlugins = [
     require('postcss-import'),
     require('postcss-mixins'),
-    require('postcss-nested'),
     require('postcss-simple-vars'),
+    require('postcss-nested'),
+    require('postcss-hexrgba'),
     require('autoprefixer')
 ];
 
 module.exports = {
-    entry: './app/assets/scripts/App.js',
+    entry: './app/assets/scripts/App',
     output: {
         filename: 'bundled.js',
         path: path.resolve(__dirname, 'app')

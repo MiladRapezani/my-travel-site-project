@@ -9,6 +9,7 @@
     
     &__text-content {
         position: absolute;
+        padding-top: 6rem;  /* for navbar */
         width: 100%;
         top: 50%;
         transform: translateY(-50%);

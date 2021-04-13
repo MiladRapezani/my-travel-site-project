@@ -1,0 +1,49 @@
+
+.primary-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    @mixin atMedium {
+        flex-direction: row;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__list-item {
+        margin: 2rem 0 1rem;
+    }
+    &__list-item + &__list-item {
+        margin-right: 1.5rem;
+    }
+
+    @mixin atMedium {
+        &__list-item {
+            margin: 0;
+            margin-left: 2rem;
+        }
+        &__list-item + &__list-item {
+            margin-right: 0;
+        }
+    }
+    
+    &__link {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #fff;
+        background-color: rgba($color-rgb-primary, .7);
+        padding: .5rem 1rem;
+        border-radius: 3px;
+
+        @mixin atMedium {
+            font-size: 1.5rem;
+            background-color: transparent;
+            padding: 0;
+        }
+    }
+}
