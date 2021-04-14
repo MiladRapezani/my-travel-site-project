@@ -8,30 +8,39 @@
     &--is-expanded {
         background-color: rgba($color-rgb-primary, .5);
     }
-    
+
     @mixin atMedium {
         position: fixed;
         background-color: rgba($color-rgb-primary, .3);
+
+        &--dark {
+            background-color: rgba($color-rgb-primary-dark, .85);
+        }
     }
 
     &__container {
         display: flex;
         padding: 1rem 0;
-        overflow-y: hidden;
     }
 
     &__logo {
         position: absolute;
         top: 0;
         right: 50%;
+        transition: transform .3s ease-out;
         transform: translateX(50%);
         padding: 1.1rem 2.2rem;
         background-color: $color-primary;
 
         @mixin atMedium {
             right: auto;
+            transform-origin: center top;
             transform: translateX(0);
             padding: 2rem 3.6rem;
+
+            .site-header--dark & {
+                transform: translateX(0) scale(.525);
+            }
         }
     }
 

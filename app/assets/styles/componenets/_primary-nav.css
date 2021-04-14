@@ -44,6 +44,10 @@
             font-size: 1.5rem;
             background-color: transparent;
             padding: 0;
+
+            &--is-current {
+                color: $color-secondary;
+            }
         }
     }
 }
