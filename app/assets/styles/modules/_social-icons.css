@@ -1,0 +1,25 @@
+
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__icon {
+        flex-basis: 35%;
+        height: 7rem;
+        margin-bottom: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $color-secondary;
+        border-radius: 3px;
+
+        @mixin atSmall {
+            flex-basis: 7rem;
+            height: 7rem;
+        }
+    }
+}

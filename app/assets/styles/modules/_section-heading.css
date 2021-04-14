@@ -12,6 +12,10 @@
     &--mb {
         margin-bottom: 13rem;
     }
+
+    &--mb-small {
+        margin-bottom: 2rem;
+    }
     
     @mixin atSmall {
         flex-direction: row;

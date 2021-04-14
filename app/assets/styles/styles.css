@@ -18,6 +18,8 @@
 @import './modules/_testimonial-item.css';
 @import './layout/_site-footer.css';
 @import './modules/_reveal-item.css';
+@import './modules/_modal.css';
+@import './modules/_social-icons.css';
 
 @import './componenets/_button.css';
 @import './componenets/_primary-nav.css';
