@@ -3,14 +3,14 @@ class Modal {
     constructor() {
         this.injectHtml();
         this.modalElement = document.querySelector('.modal');
-        this.modalOpenButtons = document.querySelectorAll('.js-open-modal');
+        // this.modalOpenButtons = document.querySelectorAll('.js-open-modal');
         this.modalInnerElement = document.querySelector('.modal__inner');
         // this.modalCloseButtons = document.querySelectorAll('.modal, .modal__close');
         this.events();
     }
 
     events() {
-        this.modalOpenButtons.forEach(btn => btn.addEventListener('click', (e) => this.openTheModal(e)));
+        // this.modalOpenButtons.forEach(btn => btn.addEventListener('click', (e) => this.openTheModal(e)));
         
         this.modalElement.addEventListener('click', () => this.closeTheModal());
         this.modalInnerElement.addEventListener('click', e => e.stopPropagation());
@@ -18,8 +18,8 @@ class Modal {
         document.addEventListener('keyup', e => { if(e.key === 'Escape' || e.key === 'Esc') this.closeTheModal(); });
     }
     
-    openTheModal(e) {
-        e.preventDefault();     // we force href dont not work
+    openTheModal() {
+        // e.preventDefault();     // we force href dont not work
         this.modalElement.classList.add('modal--is-visible');
     }
     
