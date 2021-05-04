@@ -4,11 +4,13 @@ import MobileMenu from './modules/MobileMenu.js';
 import RevealOnScroll from './modules/RevealOnScroll.js';
 import StickyHeader from './modules/StickyHeader.js';
 // import Modal from './modules/Modal.js';
+import ClientArea from './modules/ClientArea.js';
 
 new RevealOnScroll(document.querySelectorAll('.feature-item'), 75);
 new RevealOnScroll(document.querySelectorAll('.testimonial-item'), 60);
 new MobileMenu();
 new StickyHeader();
+new ClientArea();
 let modal;
 
 document.querySelectorAll('.js-open-modal').forEach(btn => btn.addEventListener('click', e => {

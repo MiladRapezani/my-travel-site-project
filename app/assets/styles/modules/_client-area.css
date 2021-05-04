@@ -1,0 +1,21 @@
+.client-area {
+    &__form {
+        display: flex;
+    }
+
+    &__input {
+        flex: 1;
+        margin-left: -2px;
+        padding: 1rem;
+        border: 1px solid $color-secondary;
+        border-left: none;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+
+        &:focus {
+            outline: 0;
+            background-color: rgba($color-rgb-secondary, .15);
+        }
+    }
+    
+}

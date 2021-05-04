@@ -4,6 +4,7 @@
     padding: .8rem 1.6rem;
     background-color: $color-primary;
     color: $color-white;
+    border: none;
     border-radius: 2px;
     box-shadow: 0 4px 1rem rgba(0,0,0, .2);
     cursor: pointer;
