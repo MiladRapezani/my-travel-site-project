@@ -22,7 +22,7 @@ class ClientArea {
 
         Axios.post(url, { 'password': this.field.value })
              .then(response => {
-                 this.field.remove();
+                 this.form.remove();
                  this.clientAreaContent.innerHTML = response.data;
              })
              .catch(() => {
