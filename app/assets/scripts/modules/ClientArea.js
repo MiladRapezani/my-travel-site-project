@@ -22,10 +22,13 @@ class ClientArea {
 
         Axios.post(url, { 'password': this.field.value })
              .then(response => {
-                 console.log(response);
+                 this.field.remove();
+                 this.clientAreaContent.innerHTML = response.data;
              })
-             .catch(reject => {
-                 console.log(reject)
+             .catch(() => {
+                 this.clientAreaContent.innerHTML = `<p class="client-area__error">عبارت مخفی صحیح نیست، می تونید مجدد امتحان کنید.</p>`;
+                 this.field.value = '';
+                 this.field.focus();
              })
     }
 

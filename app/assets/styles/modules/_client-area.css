@@ -17,5 +17,9 @@
             background-color: rgba($color-rgb-secondary, .15);
         }
     }
+
+    &__error {
+        color: red;
+    }
     
 }
