@@ -27,3 +27,12 @@ document.querySelectorAll('.js-open-modal').forEach(btn => btn.addEventListener(
         modal.openTheModal();
     }
 }));
+
+// React Related Codes goes here
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+// Import React Components that we created
+import MyAmazingComponent from './modules/MyAmazingComponent.js'
+
+ReactDOM.render(<MyAmazingComponent />, document.querySelector('#my-react-example'));

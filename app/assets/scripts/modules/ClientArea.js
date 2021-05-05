@@ -1,5 +1,4 @@
 import Axios from 'axios';
-import { reject } from 'lodash';
 
 class ClientArea {
     constructor() {

@@ -45,7 +45,17 @@ const config = {
     entry: './app/assets/scripts/App',
     module: {
         rules: [
-            cssConfig
+            cssConfig,
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-react', '@babel/preset-env']
+                  }
+                }
+            }
         ]
     },
     plugins: pages
@@ -96,16 +106,16 @@ if(currentTask === 'build') {
         new RunAfterCompile()
     );
     cssConfig.use.unshift(MiniCssExtractPlugin.loader);
-    config.module.rules.push({
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-    });
+    // config.module.rules.push({
+    //     test: /\.m?js$/,
+    //     exclude: /(node_modules|bower_components)/,
+    //     use: {
+    //       loader: 'babel-loader',
+    //       options: {
+    //         presets: ['@babel/preset-env']
+    //       }
+    //     }
+    // });
     postCSSPlugins.push(require('cssnano'));
 }
 
